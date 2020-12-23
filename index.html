@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      margin: 0px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 3px;
+      color: #2e2e2e;
+      margin-top: 24px;
+
+    }
+
+    .brown-box {
+      width: 100%;
+      height: 500px;
+      background-color: #565656;
+      position: relative;
+    }
+
+    .white-strip {
+      height: 50px;
+      background-color: #eeeeee;
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      bottom: 100px;
+      top: 390px;
+
+    }
+
+    .yellow-box {
+      width: 60%;
+      height: 120px;
+      background-color: #fabe28;
+      border-radius: 10px;
+      margin: auto;
+      position: absolute;
+      top: -35px;
+      left: 0px;
+      right: 0px;
+      z-index: 4;
+
+      box-shadow: 1px 1px 23px -4px #544f4f;
+
+
+    }
+
+    .circle-image {
+      height: 300px;
+      width: 300px;
+      border-radius: 100%;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      right: 0px;
+      left: 0px;
+      background-color: #eeeeee;
+      background-image: url('formal.jpg');
+      background-size: cover;
+      top: 100px;
+      z-index: 3;
+
+    }
+
+    .circle-border {
+      height: 310px;
+      width: 310px;
+      border-radius: 100%;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      right: 0px;
+      left: 0px;
+      background-color: #544f4f;
+      top: 87px;
+      border: 9px dotted #fabe28;
+      z-index: 2;
+
+    }
+
+    .about {
+      font-weight: 500;
+      font-size: larger;
+      text-align: center;
+    }
+
+    hr {
+      width: 95%;
+      height: 2px;
+      border-width: 0;
+      color: #d9d9d9;
+      background-color: #d9d9d9;
+    }
+
+    .sections {
+        display: inline-block;
+        width: 100%;
+        height: 1000px;
+    }
+
+    .left {
+      width: 45%;
+      display: block;
+      float: left;
+      padding: 0 30px 0 30px;
+    }
+
+    .right {
+      width: 45%;
+      display: block;
+      float: left;
+      border-left: 3px solid #d9d9d9;
+      height: 1080px;
+      padding: 0 0 0 35px;
+    }
+
+
+
+    .icon {
+      height: 60px;
+      width: 60px;
+      background-color: #424242;
+      border-radius: 100%;
+      margin-right: 14px;
+      margin-left: 20px;
+      border: 5px dotted #fabe28;
+
+    }
+
+    i {
+      color: #fabe28;
+      font-size: 1.5rem;
+      margin-left: 18px;
+      margin-top: 16px;
+    }
+
+    h2 {
+      font-weight: 500;
+      color: #646464;
+    }
+
+    h3 {
+      text-align: center;
+
+    }
+
+    .para{
+      padding: 0 8px 0 20px;
+    }
+
+    .range-width{
+      width: 300px;
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+<script >
+
+  // top section
+
+   let section = document.createElement("section");
+   section.setAttribute("id","top");
+   document.body.append(section);
+
+   let bg = document.createElement("div");
+   let whitestrip = document.createElement("div");
+   let yellowbox = document.createElement("div");
+   bg.setAttribute("class","brown-box");
+   whitestrip.setAttribute("class","white-strip");
+   yellowbox.setAttribute("class","yellow-box");
+   yellowbox.innerHTML = "<h1>JOSEPH ASHWIN</h1>";
+   whitestrip.appendChild(yellowbox);
+   bg.appendChild(whitestrip);
+   section.appendChild(bg);
+
+
+   let circleimg = document.createElement("div");
+   let circleborder = document.createElement("div");
+   circleimg.setAttribute("class","circle-image");
+   circleborder.setAttribute("class","circle-border");
+   section.append(circleimg,circleborder);
+
+   let par = document.createElement("p");
+   let line = document.createElement("hr");
+   let br = document.createElement("br");
+   par.setAttribute("class","about");
+   par.innerText = "Annanagar West,Chennai-600101 | 8667027042 | josephashwin200@gmail.com";
+   section.append(par,line,br);
+
+
+   // main section
+
+   let mainsection = document.createElement("section");
+   mainsection.setAttribute("id","main");
+   document.body.append(mainsection);
+
+   let container = document.createElement("div");
+   container.setAttribute("class","section");
+   mainsection.appendChild(container);
+
+  // left section
+
+   let left = document.createElement("div");
+   left.setAttribute("class","left");
+
+
+
+   let profile = icontable("fas fa-user","PROFILE");
+
+   let para = document.createElement("div");
+   para.setAttribute("class","para");
+   para.innerHTML = "  <p>I am a highly motivated aspiring Web Developer with keen inclination towards creative side of things. I am a Mechanical Engineer who discovered my passion in the world of technology. I spend a lot of time keeping myself up to date with the latest technologies. </p>"
+
+   let skills = icontable("fas fa-flask","SKILLS")
+
+   let h3 = document.createElement("h3");
+   h3.innerText = "Technical";
+
+   let table3 = document.createElement("table");
+   table3.setAttribute("style","margin-left:20px;border-spacing:5px;")
+
+   let one = trtd("JavaScript","padding-right:20%");
+   let two = trtd("CSS");
+   let three = trtd("HTML");
+   let four = trtd("REACT");
+   let five = trtd("Photoshop");
+   let six = trtd("Adobe XD");
+
+   table3.append(one,two,three,four,five,six);
+
+   let addskills = document.createElement("h3");
+   addskills.innerText = "Additional Skills";
+
+   let table4 = document.createElement("table");
+   table4.setAttribute("style","margin-left:20px;border-spacing:5px;");
+
+   let seven = trtd("Team Work","padding-right:20%");
+   let eight = trtd("Critical Thinking");
+   let nine = trtd("Communication");
+   let ten = trtd("Editing");
+   let eleven = trtd("Wireframing");
+
+   table4.append(seven,eight,nine,ten,eleven);
+
+   let workex = icontable("fas fa-briefcase","Work Experience");
+
+   let mainelement = document.createElement("div");
+   mainelement.setAttribute("class","para")
+   let element1 = document.createElement("div");
+   element1.innerHTML = "<h2>Web Designer &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 2019-2020</h2>";
+   let element2 = document.createElement("div");
+   element2.innerHTML = "<p>99Designs </p>";
+   let element3 = document.createElement("ul");
+   let element4 = document.createElement("li");
+   element4.innerHTML = "  <li>Certified mid-level web designer and have worked on several web designing projects and won the first place for a web designing contest.Gained good exposure in the world of freelancing which helped me understand clients better.</li>"
+   element3.append(element4);
+
+   let element5 = document.createElement("div");
+   element5.innerHTML = "<h2>Sales Intern &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 2017</h2>";
+   let element6 = document.createElement("div");
+   element6.innerHTML = "<p>Laugh Guru</p>";
+   let element7 = document.createElement("ul");
+   let element8 = document.createElement("li");
+   element8.innerHTML = " <li>Worked in sales to reach out to potential customers and tell them about the beneﬁts of elearning.</li>";
+   element7.append(element8);
+
+   mainelement.append(element1,element2,element3,element5,element6,element7)
+
+  // right section
+
+   let right = document.createElement("div");
+   right.setAttribute("class","right");
+
+   let lang = icontable("fas fa-globe-asia","LANGUAGES");
+
+   let langtable = document.createElement("table");
+   langtable.setAttribute("style","margin-left:20px;border-spacing:5px;")
+
+   let lang1 = trtd("English","padding-right:20%");
+   let lang2 = trtd("Tamil");
+   let lang3 = trtd("Hindi");
+
+   langtable.append(lang1,lang2,lang3);
+
+   let education = icontable("fas fa-graduation-cap","EDUCATION")
+
+   let edupara = document.createElement("div");
+   edupara.setAttribute("class","para");
+   let el1 = document.createElement("div");
+   el1.innerHTML = "<h2>B.E Mechancial Engineering  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 2016-2020</h2>";
+   let el2 = document.createElement("div");
+   el2.innerHTML = "<p>Loyola ICAM College Of Engineering & Technology</p>";
+   let el3 = document.createElement("div");
+   el3.innerHTML = "<h2>HSC  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; 2014-2016</h2>";
+   let el4 = document.createElement("div");
+   el4.innerHTML = "<p>Loyola ICAM College Of Engineering & Technology</p>";
+   let el5 = document.createElement("div");
+   el5.innerHTML = "<h2>CBSE  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; 2007-2014</h2>";
+   let el6 = document.createElement("div");
+   el6.innerHTML = "<p>SBOA School & Junior College</p>";
+
+   edupara.append(el1,el2,br,el3,el4,br,el5,el6);
+
+
+
+
+
+  // function
+
+   function trtd(text,value = "") {
+     var tr = document.createElement("tr");
+     var td1 = document.createElement("td");
+     var td2 = document.createElement("td");
+     td1.setAttribute("style",value);
+     td1.innerHTML = text;
+     var input = document.createElement("input");
+     input.setAttribute("type","range");
+     input.setAttribute("class","range-width");
+     input.setAttribute("min","0");
+     input.setAttribute("max","100");
+     td2.append(input);
+     tr.append(td1,td2);
+     return tr;
+
+   }
+
+   function icontable(name,text) {
+     var table = document.createElement("table");
+     var tr = document.createElement("tr");
+     var td1 = document.createElement("td");
+     var td2 = document.createElement("td");
+     var div = document.createElement("div");
+     var i = document.createElement("i");
+     div.setAttribute("class","icon");
+     i.setAttribute("class",name);
+     var h2 = document.createElement("h2");
+     h2.setAttribute("class","left-headings");
+     h2.innerText = text;
+     div.append(i);
+     td1.append(div);
+     td2.append(h2);
+     tr.append(td1,td2);
+     table.append(tr);
+     return table;
+   }
+
+
+
+  container.append(left,right);
+  left.append(profile,para,br,skills,h3,table3,br,addskills,table4,br,workex,mainelement);
+  right.append(lang,br,langtable,br,education,br,edupara)
+
+
+
+
+</script>
+
+</body>
+
+</html>
